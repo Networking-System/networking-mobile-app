@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:networking_app/src/widgets/auth_form_widget.dart';
 
 // The login screen to log the user in
 class LoginScreen extends StatefulWidget {
@@ -11,9 +12,16 @@ class LoginScreen extends StatefulWidget {
 class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Center(child: Text('Login Screen')),
+    return Scaffold(
+      body: Center(
+          child: Column(
+        children: const [
+          Text('Login Screen'),
+          AuthFormWidget(
+            authButton: 'Login',
+          )
+        ],
+      )),
     );
   }
 }
-

@@ -1,20 +1,29 @@
 import 'package:flutter/material.dart';
+import 'package:networking_app/src/widgets/auth_form_widget.dart';
 
-//sign up screen to register a new user
-
-class SignUpScreen extends StatefulWidget {
-  const SignUpScreen({super.key});
+// The signup screen to log the user in
+class SignupScreen extends StatefulWidget {
+  const SignupScreen({super.key});
 
   @override
-  State<SignUpScreen> createState() => _SignUpScreenState();
+  State<SignupScreen> createState() => _SignupScreenState();
 }
 
-class _SignUpScreenState extends State<SignUpScreen> {
+class _SignupScreenState extends State<SignupScreen> {
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Center(child: Text('Signup Screen')),
+    return Scaffold(
+      body: SingleChildScrollView(
+        child: Center(
+            child: Column(
+          children: const [
+            Text('Sign up Screen'),
+            AuthFormWidget(
+              authButton: 'Sign up',
+            )
+          ],
+        )),
+      ),
     );
   }
 }
-

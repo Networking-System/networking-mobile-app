@@ -13,15 +13,17 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-          child: Column(
-        children: const [
-          Text('Login Screen'),
-          AuthFormWidget(
-            authButton: 'Login',
-          )
-        ],
-      )),
+      body: SingleChildScrollView(
+        child: Center(
+            child: Column(
+          children: const [
+            Text('Login Screen'),
+            AuthFormWidget(
+              authButton: 'Login',
+            )
+          ],
+        )),
+      ),
     );
   }
 }

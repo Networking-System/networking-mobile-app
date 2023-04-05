@@ -6,15 +6,25 @@ class ForgottenPasswordScreen extends StatefulWidget {
   const ForgottenPasswordScreen({super.key});
 
   @override
-  State<ForgottenPasswordScreen> createState() => _ForgottenPasswordScreenState();
+  State<ForgottenPasswordScreen> createState() =>
+      _ForgottenPasswordScreenState();
 }
 
 class _ForgottenPasswordScreenState extends State<ForgottenPasswordScreen> {
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Center(child: Text('Login Screen')),
+    return Scaffold(
+      body: Center(
+          child: Column(
+        children: [
+          const Text('Enter email to reset password'),
+          TextFormField(
+              decoration: const InputDecoration(
+            hintText: 'Enter email to reset password',
+          )),
+          ElevatedButton(onPressed: () {}, child: const Text('Reset password'))
+        ],
+      )),
     );
   }
 }
-
